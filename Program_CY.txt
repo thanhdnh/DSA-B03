@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Stack stack1 = new Stack();
+        stack1.Push(1); stack1.Push(2); stack1.Push(3);
+        int n = (int)stack1.Pop();
+        Console.WriteLine(n);
+
+        Stack<int> stack2 = new Stack<int>();
+        stack2.Push(1); stack2.Push(2); stack2.Push(3);
+        int m = stack2.Pop();
+        Console.WriteLine(m);
+
+        foreach(int v in stack2)
+            Console.Write(v + " ");
+
+        /*------------------*/
+        Queue queue1 = new Queue();
+        queue1.Enqueue(1); queue1.Enqueue(2);
+        int nq = (int)queue1.Dequeue();
+
+        Queue<int> queue2 = new Queue<int>();
+        queue2.Enqueue(1); queue2.Enqueue(2);
+        int mq = queue2.Dequeue();
+
+        foreach(int v in queue2)
+            Console.Write(v + " ");
+
+
+        /*MyStack stack = new MyStack();
+        Console.WriteLine(stack.IsEmpty());
+        stack.Push(1); stack.Push(2); stack.Push(3);
+        stack.Push(4); stack.Push(5);
+        int n;
+        MyStack temp = new MyStack();
+        do{
+            n = (int)stack.pop().data;
+            if(n!=3)
+                temp.Push(n);
+        }while(n!=3);
+
+        do{
+            int m = (int)temp.pop().data;
+            stack.Push(m);
+        }while(!temp.IsEmpty());*/
+
+        /*Console.WriteLine(stack.IsEmpty());
+        int n = (int)stack.pop().data;
+        Console.WriteLine(n);*/
+
+
+
+        Console.ReadLine();
+    }
+}
